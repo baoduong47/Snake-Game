@@ -339,3 +339,56 @@ document.querySelector(".close").addEventListener("click", function () {
   const modal = document.getElementById("gameOverModal");
   modal.style.display = "none"; // Hide the modal
 });
+
+function random(min, max) {
+  return min + Math.random() * (max + 1 - min);
+}
+
+const body = document.querySelector("body");
+
+const canvasWidth = canvas.offsetWidth; // Get canvas width
+const canvasRect = canvas.getBoundingClientRect(); // Get canvas position and size
+
+// Function to check if a point (x, y) overlaps with the canvas
+function isOverlappingCanvas(x, y) {
+  return (
+    x >= canvasRect.left &&
+    x <= canvasRect.right &&
+    y >= canvasRect.top &&
+    y <= canvasRect.bottom
+  );
+}
+
+const starsFraction = 200; // Adjusted for the number of stars you want
+
+for (let i = 0; i < starsFraction; i++) {
+  let xPos, yPos;
+
+  // Keep generating random positions until it doesn't overlap with the canvas
+  do {
+    // Generate random positions within the viewport
+    xPos = random(0, window.innerWidth);
+    yPos = random(0, window.innerHeight);
+  } while (isOverlappingCanvas(xPos, yPos));
+
+  // Set up other random elements
+  let alpha = random(0.5, 1);
+  let size = random(1, 2);
+  let colour = "#ffffff";
+
+  // Add them to the body
+  const star = document.createElement("div");
+  star.classList.add("star"); // Apply CSS class for animation
+  star.style.position = "fixed"; // Position fixed to stay in place
+  star.style.left = xPos + "px";
+  star.style.top = yPos + "px";
+  star.style.opacity = alpha;
+  star.style.width = size + "px";
+  star.style.height = size + "px";
+  star.style.backgroundColor = colour;
+
+  // Apply random delay to each star's animation
+  const delay = random(0, 2); // Adjust the range of delay as needed
+  star.style.animationDelay = delay + "s";
+  document.body.appendChild(star);
+}

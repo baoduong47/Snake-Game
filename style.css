@@ -4,6 +4,7 @@ body {
   background-color: #0e0e1b; /* Dark space background */
   font-family: "Roboto", sans-serif; /* Updated font */
   overflow: hidden; /* Remove scrolling */
+  height: 100%;
 }
 
 .container {
@@ -59,6 +60,8 @@ body {
 #gameCanvas {
   display: block;
   margin: 0 auto;
+  position: absolute;
+  z-index: 1; /* Ensure canvas is on top */
 }
 
 #restartBtn {
@@ -131,4 +134,20 @@ body {
 #audio-icon {
   width: 100%; /* Set the image width to fill the container */
   height: auto; /* Maintain aspect ratio */
+}
+.star {
+  animation: twinkling 2s infinite alternate; /* Apply the twinkling animation */
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 0.2; /* Start with lower opacity */
+  }
+  100% {
+    opacity: 0.8; /* Reach full opacity */
+  }
 }
