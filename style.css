@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e0e1b; /* Dark space background */
-  font-family: "Roboto", sans-serif; /* Updated font */
-  overflow: hidden; /* Remove scrolling */
+  background-color: #0e0e1b;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -16,34 +16,33 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #f2f2f2;
   padding: 10px;
 }
 
-/* Title of the game */
 .header h1 {
   margin: 0;
   font-size: 3.5rem;
-  text-shadow: 2px 2px px rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
   color: #ffca28;
   letter-spacing: 5px;
-  font-family: "Press Start 2P", cursive; /* Applying Press Start 2P font */
+  font-family: "Press Start 2P", cursive;
+  padding-bottom: 2rem;
 }
 
-/* Score and High Score */
 #scoreBoard,
 #highScore {
   margin-top: 10px;
   font-size: 1.25rem;
   color: #ffca28;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
-  font-family: "Pixel Operator", monospace; /* Applying Pixel Operator font */
+  font-family: "Pixel Operator", monospace;
 }
 
 .header p {
   margin-top: 5px;
-  font-size: 1.25rem; /* Larger text */
+  font-size: 1.25rem;
 }
 
 .canvas-container {
@@ -53,22 +52,22 @@ body {
   overflow: hidden;
   gap: 2px;
   border-radius: 15px;
-  border: 25px solid #0c4059; /* Darker blue border */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border: 25px solid #0c4059;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 #gameCanvas {
   display: block;
   margin: 0 auto;
   position: absolute;
-  z-index: 1; /* Ensure canvas is on top */
+  z-index: 1;
 }
 
 #restartBtn {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.25rem;
-  background-color: #ffca28; /* Dark blue button */
+  background-color: #ffca28;
   color: #0d0c0c;
   border: none;
   margin-top: 15px;
@@ -77,66 +76,48 @@ body {
 }
 
 #restartBtn:hover {
-  background-color: #ffeb3b; /* Yellow hover color */
-
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+  background-color: #ffeb3b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal styles */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  z-index: 1; /* Sit on top */
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
-  /* Other styles */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Modal content */
 .modal-content {
   background-color: #fefefe;
   font-family: "Silkscreen", monospace;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
+  width: 30%;
   text-align: center;
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .audio-container {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 50px; /* Set the width of the container */
-  height: 50px; /* Set the height of the container */
-  overflow: hidden; /* Hide any overflow content */
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
 }
 
 #audio-icon {
-  width: 100%; /* Set the image width to fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
+
 .star {
-  animation: twinkling 2s infinite alternate; /* Apply the twinkling animation */
+  animation: twinkling 2s infinite alternate;
   position: fixed;
   width: 2px;
   height: 2px;
@@ -145,9 +126,9 @@ body {
 
 @keyframes twinkling {
   0% {
-    opacity: 0.2; /* Start with lower opacity */
+    opacity: 0.2;
   }
   100% {
-    opacity: 0.8; /* Reach full opacity */
+    opacity: 0.8;
   }
 }
