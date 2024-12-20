@@ -162,8 +162,8 @@ function startGame(event) {
 
 function restartGame() {
   snake = [
-    { x: 10, y: 10 },
-    { x: 20, y: 10 },
+    { x: 50, y: 50 },
+    { x: 60, y: 50 },
   ];
   dx = 10;
   dy = 0;
