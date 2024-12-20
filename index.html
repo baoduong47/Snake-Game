@@ -6,15 +6,11 @@
     <title>Slither Space</title>
     <script src="/javascript.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Slither Space</h1>
+        <h1>Snake Game</h1>
         <div class="score-container">
           <div id="scoreBoard">Score: 0</div>
           <div id="highScore">Highscore: 0</div>
@@ -28,6 +24,7 @@
       </div>
       <div id="gameOverModal" class="modal">
         <div class="modal-content">
+          <span class="close"></span>
           <h2>Game Over</h2>
           <p>Your score: <span id="finalScore">0</span></p>
           <button id="restartBtn">Restart</button>

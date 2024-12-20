@@ -4,8 +4,8 @@ const board_border = "black";
 const food_color = "#ffd700";
 
 let snake = [
-  { x: 10, y: 10 },
-  { x: 20, y: 10 },
+  { x: 50, y: 50 },
+  { x: 60, y: 50 },
 ];
 let scoreBoard = 0;
 let highScore = 0;
@@ -269,11 +269,6 @@ function displayGameOverModal() {
 
 document.getElementById("restartBtn").addEventListener("click", function () {
   restartGame();
-  const modal = document.getElementById("gameOverModal");
-  modal.style.display = "none";
-});
-
-document.querySelector(".close").addEventListener("click", function () {
   const modal = document.getElementById("gameOverModal");
   modal.style.display = "none";
 });
